@@ -3,6 +3,8 @@ const bodyParser= require('body-parser')
 const app = express()
 const MongoClient = require('mongodb').MongoClient;
 app.set('view engine', 'ejs');
+app.set('view engine', 'jade');
+app.use(express.static('public'));
  var db;
 
 MongoClient.connect('mongodb://Nadolskyi:123qaz@ds127988.mlab.com:27988/mongo-crud', (err, database) => {

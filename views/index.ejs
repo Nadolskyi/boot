@@ -3,25 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>MY APP</title>
-  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="/css/custom.css", rel="stylesheet", type='text/css'>
 </head>
 <body>
-  May Node and Express be with you.
-
-  <ul class="quotes" style='background:#eee'
-  <% for(var i=0; i<quotes.length; i++) {%>
-    <li class="quote">
-      <span  class="label label-success"><%= quotes[i].name %></span>
-      <span><%= quotes[i].quote %></span>
-    </li>
+  
+  <table class="table table-hover" class="quotes" border=1 >
+  
+    <tr style = "background: #eee">
+        <th> First Name </th>
+        <th> Last Name </th>
+        <th> age </th>
+    </tr>
+    <tr>
+     <% for(var i=0; i<quotes.length; i++) {%>
+        <td><%= quotes[i].name %></td>
+        <td><%= quotes[i].quote %></td>
+        <td><%= quotes[i].age %></td>
+      </tr>
   <% } %>
-  </ul>
+  </table>
 
-  <form action="/quotes" method="POST">
-    <input type="text" placeholder="name" name="name">
-    <input type="text" placeholder="quote" name="quote">
-    <button type="submit" class="label label-success">Submit</button>
+<a href="#spoiler-open-1" id="spoiler-open-1" class="trigger open"><span  class="btn btn-success">Add</span></a>
+<a href="#spoiler-close-1" id="spoiler-close-1" class="trigger close"><span  class="btn btn-success">Close</span></a>
+<div class="spoiler">
+  <form action="/quotes" method="POST" class="form-inline" >
+    <div class="form-group">
+    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="First Name" name="name">
+  </div>
+  <div class="form-group">
+      <input type="text" class="form-control" id="exampleInputPassword3" placeholder="Last Name" name="quote">
+  </div>
+  <div class="form-group">
+      <input type="text" class="form-control" id="exampleInputPassword3" placeholder="age" name="age">
+  </div>
+    <button type="submit" class="btn btn-success">Submit</button>
   </form>
+  </div>
 </body>
 </html>
