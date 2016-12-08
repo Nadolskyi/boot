@@ -1,7 +1,6 @@
 {
   "name": "workspace",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -23,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/Nadolskyi/boot/issues"
   },
-  "homepage": "https://github.com/Nadolskyi/boot#readme"
+  "homepage": "https://github.com/Nadolskyi/boot#readme",
+  "description": ""
 }
