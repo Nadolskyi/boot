@@ -21,7 +21,7 @@
         <td><%= quotes[i].name %></td>
         <td><%= quotes[i].quote %></td>
         <td><%= quotes[i].age %></td>
-         <td class="delEdit"><button type="button" class="btn btn-warning btn-sm" onclick="return confirm('Ви впевнені що хочете видалити користувача?')">Delete </button>
+         <td class="delEdit"><button type="button" class="btn btn-warning btn-sm" onclick="return confirm('Ви впевнені що хочете видалити користувача?')"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Del</button>
         <button type="button" class="btn btn-primary btn-sm" onclick="return confirm('Бажаєте внести зміни ?')">Edit</button>
          </td>
       </tr>
@@ -41,7 +41,7 @@
   <div class="form-group">
       <input type="text" class="form-control" id="exampleInputPassword3" placeholder="age" name="age">
   </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit</button>
   </form>
   </div>
 </body>
