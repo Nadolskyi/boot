@@ -9,22 +9,26 @@
 <body>
   
   <table class="table table-hover" class="quotes" border=1 >
-  
-    <tr style = "background: #eee">
+  <h1 class="nameTable"> Table of users  </h1>
+    <tr class = "firstRow">
         <th> First Name </th>
         <th> Last Name </th>
         <th> age </th>
+        <th> change </th>
     </tr>
     <tr>
      <% for(var i=0; i<quotes.length; i++) {%>
         <td><%= quotes[i].name %></td>
         <td><%= quotes[i].quote %></td>
         <td><%= quotes[i].age %></td>
+         <td class="delEdit"><button type="button" class="btn btn-warning btn-sm" onclick="return confirm('Ви впевнені що хочете видалити користувача?')">Delete </button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="return confirm('Бажаєте внести зміни ?')">Edit</button>
+         </td>
       </tr>
   <% } %>
   </table>
 
-<a href="#spoiler-open-1" id="spoiler-open-1" class="trigger open"><span  class="btn btn-success">Add</span></a>
+<a href="#spoiler-open-1" id="spoiler-open-1" class="trigger open"><span  class="btn btn-success ">Add</span></a>
 <a href="#spoiler-close-1" id="spoiler-close-1" class="trigger close"><span  class="btn btn-success">Close</span></a>
 <div class="spoiler">
   <form action="/quotes" method="POST" class="form-inline" >
