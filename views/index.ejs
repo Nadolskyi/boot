@@ -5,6 +5,7 @@
   <title>MY APP</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="/css/custom.css", rel="stylesheet", type='text/css'>
+ 
 </head>
 <body>
   
@@ -19,12 +20,12 @@
     </tr>
     <tr>
      <% for(var i=0; i<quotes.length; i++) {%>
-        <td><%= quotes[i]._id%></td>
+        <td><%= quotes[i]._id %></td>
         <td><%= quotes[i].name %></td>
         <td><%= quotes[i].quote %></td>
         <td><%= quotes[i].age %></td>
          <td class="delEdit">
-        <a href="#"  class="delete"  id=quotes[i]._id ><span class="btn btn-warning btn-sm"> Del</span></a>
+        <a href="#"  class="delete"  id="<%= quotes[i]._id %>"  ><span class="btn btn-warning btn-sm"> Del</span></a>
         <a href="#" class="update" id=quotes[i]._id > <span class="btn btn-primary btn-sm" >Edit </span> </a>
          </td>
       </tr>
@@ -47,6 +48,6 @@
     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit</button>
   </form>
   </div>
-<script src="main.js"></script>
+ <script src="main.js"></script>
 </body>
 </html>
