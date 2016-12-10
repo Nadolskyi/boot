@@ -32,10 +32,6 @@ app.use(bodyParser.urlencoded({extended: true}));
   });
 })
 
-app.param('_id', function(req, res, next, id) {
-  req.id = id;
-  next();
-});
 
 app.delete('/quotes', (req, res) => {
   db.collection('quotes').findOneAndDelete({"_id" : ObjectID(req.body._id)},
