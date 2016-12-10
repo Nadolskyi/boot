@@ -11,18 +11,21 @@
   <table class="table table-hover" class="quotes" border=1 >
   <h1 class="nameTable"> Table of users  </h1>
     <tr class = "firstRow">
+        <th> id </th>
         <th> First Name </th>
         <th> Last Name </th>
         <th> age </th>
-        <th> change </th>
+        <th> action </th>
     </tr>
     <tr>
      <% for(var i=0; i<quotes.length; i++) {%>
+        <td><%= quotes[i]._id%></td>
         <td><%= quotes[i].name %></td>
         <td><%= quotes[i].quote %></td>
         <td><%= quotes[i].age %></td>
-         <td class="delEdit"><button type="button" class="btn btn-warning btn-sm" onclick="return confirm('Ви впевнені що хочете видалити користувача?')"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Del</button>
-        <button type="button" class="btn btn-primary btn-sm" onclick="return confirm('Бажаєте внести зміни ?')">Edit</button>
+         <td class="delEdit">
+        <a href="#"  class="btn btn-warning btn-sm" onclick="return confirm('Ви впевнені що хочете видалити користувача?')" id=quotes[i]._id> Del</a>
+        <a href="#" class="btn btn-primary btn-sm" onclick="return confirm('Бажаєте внести зміни ?')" id = "Edit" >Edit</a>
          </td>
       </tr>
   <% } %>

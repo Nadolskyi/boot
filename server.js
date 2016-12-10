@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser= require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
+const ObjectID = require('mongodb').ObjectID
 app.set('view engine', 'ejs');
 app.set('view engine', 'jade');
 app.use(express.static('public'));
@@ -28,5 +29,18 @@ app.use(bodyParser.urlencoded({extended: true}));
   db.collection('quotes').find().toArray((err, result) => {
     if (err) return console.log(err);
     res.render('index.ejs', {quotes: result});
+  });
+})
+
+app.param('_id', function(req, res, next, id) {
+  req.id = id;
+  next();
+});
+
+app.delete('/quotes', (req, res) => {
+  db.collection('quotes').findOneAndDelete({"_id" : ObjectID(req.body._id)},
+  (err, result) => {
+    if (err) return res.send(500, err);
+    res.send(result);
   });
 })
