@@ -20,14 +20,13 @@
     </tr>
     <tr>
      <% for(var i=0; i<quotes.length; i++) {%>
-        <td><%= quotes[i]._id %></td>
+        <td><%= [i+1] %></td>
         <td><%= quotes[i].name %></td>
         <td><%= quotes[i].quote %></td>
         <td><%= quotes[i].age %></td>
          <td class="delEdit">
-        <a href="#"  class="delete"  id="<%= quotes[i]._id %>"  ><span class="btn btn-warning btn-sm"> Del</span></a>
-        <a href="#" class="update" id=quotes[i]._id > <span class="btn btn-primary btn-sm" >Edit </span> </a>
-         </td>
+     <span  class="btn btn-warning btn-sm" >  <a href = "#" class="delete" id="<%= quotes[i].quote %>" >Delete</a></span>
+      </td>
       </tr>
   <% } %>
   </table>
@@ -37,10 +36,10 @@
 <div class="spoiler">
   <form action="/quotes" method="POST" class="form-inline" >
     <div class="form-group">
-    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="First Name" name="name">
+    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="First Name" name="name" >
   </div>
   <div class="form-group">
-      <input type="text" class="form-control" id="exampleInputPassword3" placeholder="Last Name" name="quote">
+      <input type="text" class="form-control" id="exampleInputPassword3" placeholder="Last Name" name="quote" required>
   </div>
   <div class="form-group">
       <input type="text" class="form-control" id="exampleInputPassword3" placeholder="age" name="age">

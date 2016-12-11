@@ -34,15 +34,12 @@ app.use(bodyParser.urlencoded({extended: true}));
   });
 })
 
- 
- 
-app.delete('/quotes', (req, res) => {
-    db.collection('quotes').findOneAndDelete({"_id" : ObjectID(req.body.id)}, 
-    (err, result) => {
+ app.delete('/quotes', (req, res) => {
+ db.collection('quotes').findOneAndDelete({quote : req.body.quote},
+  (err, result) => {
     if (err) return res.send(500, err);
     res.send(result);
-  })
 });
-
+})
 
  
