@@ -21,6 +21,4 @@ del[i].addEventListener('click', function (event) {
     console.log(data);
     window.location.reload(true);
   });
-}else{
-  alert("Правильно нефіг!");
 }})};
