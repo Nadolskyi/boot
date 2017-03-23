@@ -1,6 +1,7 @@
 body {
     margin: 15px;
 }
+
 .spoiler {
     display: none;
 }
@@ -14,20 +15,28 @@ body {
     display: none;
 }
 
-.trigger.open:target + .trigger.close {
+.trigger.open:target+.trigger.close {
     display: inline;
 }
 
-.trigger.open:target + .trigger.close + .spoiler {    
+.trigger.open:target+.trigger.close+.spoiler {
     display: block;
 }
+
 .nameTable {
     text-align: center;
 }
+
 .firstRow th {
     background-color: #eee;
     text-align: center;
 }
+
 .delEdit {
     text-align: center;
+}
+
+table,
+td {
+    border: 1px solid gray
 }
