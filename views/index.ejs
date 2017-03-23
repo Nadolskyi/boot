@@ -23,10 +23,10 @@
         <td><%= quotes[i].name %></td>
         <td><%= quotes[i].quote %></td>
         <td><%= quotes[i].age %></td>
-         <td class="delEdit">
-     <button  class="btn btn-warning btn-sm" >  <span class="delete" id="<%= quotes[i].quote %>" >Delete</span></button>
-      </td>
-      </tr>
+        <td class="delEdit">
+        <button  class="btn btn-warning btn-sm" >  <span class="delete" id="<%= quotes[i].quote %>" >Delete</span></button>
+        </td>
+    </tr>
   <% } %>
   </table>
 
@@ -35,13 +35,13 @@
 <div class="spoiler">
   <form action="/quotes" method="POST" class="form-inline" >
     <div class="form-group">
-    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="First Name" name="name" >
+    <input type="text" class="form-control" placeholder="First Name" name="name" >
   </div>
   <div class="form-group">
-      <input type="text" class="form-control" id="exampleInputPassword3" placeholder="Last Name" name="quote" required>
+      <input type="text" class="form-control" placeholder="Last Name" name="quote" required>
   </div>
   <div class="form-group">
-      <input type="text" class="form-control" id="exampleInputPassword3" placeholder="age" name="age">
+      <input type="text" class="form-control" placeholder="age" name="age">
   </div>
     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit</button>
   </form>
