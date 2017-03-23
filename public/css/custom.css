@@ -7,6 +7,7 @@ body {
 
 .trigger.close {
     display: none;
+    float: left;
 }
 
 .trigger.open:target {
